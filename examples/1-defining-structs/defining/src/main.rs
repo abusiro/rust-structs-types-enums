@@ -1,4 +1,5 @@
-
+//la compilación de esto devuelve warnings, pero no errores
+// para evitar los warnings se puede instanciar la estructura con los valores que se le asignarán
 #[derive(Debug)]
 struct Person {
     first_name: String,
@@ -13,3 +14,5 @@ fn main() {
         age: 25,
     });
 }
+
+

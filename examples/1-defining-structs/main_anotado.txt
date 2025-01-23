@@ -1,0 +1,34 @@
+#[derive(Debug)]
+struct Person {
+    first_name: String,
+    last_name: String,
+    age: u8,
+    email: String,
+    phone_number: String,
+}
+
+impl Person {
+    // Method to calculate and return the full name
+    fn full_name(&self) -> String {
+        format!("{} {}", self.first_name, self.last_name)
+    }
+}
+
+fn main() {
+    let person = Person {
+        first_name: "John".to_string(),
+        last_name: "Doe".to_string(),
+        age: 25,
+        email: "xxxx@yyy.com".to_string(),
+        phone_number: "+34 321543 23543".to_string(),
+    };
+
+    // Print the debug representation of the person
+    println!("{:?}", person);
+
+    // Invoke the full_name method and print the result
+    // usamos la notación person.full_name porque es un metodo que requiere de una instancia del struct. 
+    // Sin embargo usaremos person::funcion_asociada() cuando tengamos una función asociada que se refiere al struct y no a una
+    // instancia. Y por lo tanto se habra definido sin self
+    println!("Full Name: {}", person.full_name());
+}
